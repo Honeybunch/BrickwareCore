@@ -2,10 +2,10 @@
 #define COLLISION_H
 
 //DLL Header
-#include "BrickwareCoreDLL.h"
+#include "BrickwareCoreDLL.hpp"
 
 //Other Brickware Project Headers
-#include "Vector3.h"
+#include "BrickwareMath\Vector3.hpp"
 
 //System Level Headers
 #include <vector>

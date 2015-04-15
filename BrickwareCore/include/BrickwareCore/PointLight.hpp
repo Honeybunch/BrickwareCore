@@ -2,16 +2,16 @@
 #define POINT_LIGHT_H
 
 //DLL Header
-#include "BrickwareCoreDLL.h"
+#include "BrickwareCore\BrickwareCoreDLL.hpp"
 
 //Other Brickware Project Headers
-#include "Vector3.h"
+#include "BrickwareMath\Vector3.hpp"
 
-#include "Light.h"
-#include "RenderingManager.h"
+#include "BrickwareGraphics\Light.hpp"
+#include "BrickwareGraphics\RenderingManager.hpp"
 
 //Project Headers
-#include "Component.h"
+#include "BrickwareCore\Component.hpp"
 
 namespace Brickware
 {
