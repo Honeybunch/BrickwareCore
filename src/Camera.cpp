@@ -21,7 +21,7 @@ Camera::Camera(float FoV = 50, float width = 0.1f, float height = 0.1f, float zN
 	lookAt = Vector3();
 
 	//Create test render texture
-	renderTexture = new RenderTexture(Screen::GetWidth(), Screen::GetHeight(), 16);
+	renderTexture = new RenderTexture(TextureType::TEX_2D, Screen::GetWidth(), Screen::GetHeight(), 16);
 
 	SceneCameras.push_back(this);
 }
