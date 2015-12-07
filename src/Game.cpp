@@ -227,7 +227,7 @@ void Game::render()
 	swapBuffersD3D();
 #else
 	Camera* camera = Camera::GetActiveCamera();
-	Graphics::PrimitiveManager::DrawPrimitives(camera->GetViewMatrix(), camera->GetProjectionMatrix());
+	
 	swapBuffersGL();
 	Graphics::PrimitiveManager::ClearPrimitives();
 #endif
