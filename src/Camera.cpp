@@ -74,7 +74,7 @@ void Camera::Render()
 	pass.view = viewMatrix;
 	pass.projection = projectionMatrix;
 	pass.renderTexture = renderTexture;
-	pass.shader = nullptr;
+	pass.material = nullptr;
 
 	RenderingManager::AddScenePass(pass);
 
