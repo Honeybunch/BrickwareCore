@@ -21,7 +21,7 @@ Camera::Camera(float FoV = 50, float width = 0.1f, float height = 0.1f, float zN
 	lookAt = Vector3();
 
 	//Create test render texture
-	renderTexture = new RenderTexture(TextureType::TEX_2D, Screen::GetWidth(), Screen::GetHeight(), 16);
+	renderTexture = new RenderTexture(TextureType::TEX_2D, Screen::GetWidth(), Screen::GetHeight(), 16, TextureFormat::RGB);
 
 	SceneCameras.push_back(this);
 }
@@ -71,21 +71,13 @@ void Camera::Render()
 		RenderingManager::SetFinalRenderTarget(renderTexture);
 
 	RenderPass pass;
+	pass.eyePoint = getGameObject()->getTransform()->getPosition();
 	pass.view = viewMatrix;
 	pass.projection = projectionMatrix;
 	pass.renderTexture = renderTexture;
 	pass.material = nullptr;
 
 	RenderingManager::AddScenePass(pass);
-
-	for (unsigned int i = 0; i < Graphics::Material::Materials.size(); i++)
-	{
-		Graphics::Material* material = Graphics::Material::Materials[i];
-
-		material->setVector3("lookAt", lookAt);
-		material->setVector3("eyePoint", getGameObject()->getTransform()->getPosition());
-		material->setVector3("up", getGameObject()->getTransform()->getUp());
-	}
 }
 
 /* 

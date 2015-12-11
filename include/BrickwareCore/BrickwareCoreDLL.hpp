@@ -3,6 +3,9 @@
 
 #ifdef _WIN32
 
+//Disable warnings that shouldn't appear in VS2015
+#pragma warning (disable : 4251)
+
 #ifdef BRICKWARE_CORE_EXPORTS
 #	define BRICKWARE_CORE_API __declspec(dllexport)
 #else
