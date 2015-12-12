@@ -265,9 +265,6 @@ bool Game::initGL()
 	glEnable(GL_PROGRAM_POINT_SIZE);
 	glClearColor(1.0, 1.0, 1.0, 1.0);
 
-	glEnable(GL_BLEND);
-	glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
-
 #ifdef BRICKWARE_DEBUG
 	// Enable the debugging layer of OpenGL
 	// GL_DEBUG_OUTPUT - Faster version but not useful for breakpoints
